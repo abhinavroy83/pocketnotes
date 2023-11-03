@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./App.css";
-import { pocketprovider } from "./context/pocketContext";
-import NotesList from "./components/NotesList";
+import NotesList from "./components/NotesList/NotesList";
 import NotesHome from "./components/NotesHome";
+import { pocketprovider } from "./context/pocketContext";
 
 function App() {
   const [selected, setSelected] = useState("");

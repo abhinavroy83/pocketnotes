@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Notestitle.css";
 
 function Notestitle({ title }) {
   const { selected, setSelected } = useState();
