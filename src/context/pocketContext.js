@@ -2,9 +2,7 @@ import { createContext, useContext } from "react";
 
 const PocketContext = createContext({
   notes: [],
-  addnotes: () => {},
-  selected: "",
-  setSelected: () => {},
+  addnotes: () => {}
 });
 
 export const usePocketContext = () => {
