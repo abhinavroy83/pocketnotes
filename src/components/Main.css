@@ -1,15 +1,21 @@
+/* CSS for screens wider than 768 pixels */
 .maindis {
   height: 100vh;
-  width: 100wh;
+  width: 100vw;
   display: flex;
 }
+
+
 @media (max-width: 768px) {
-  /* Hide NotesList in responsive mode */
-  .maindis .NotesList {
-    display: none;
+  
+  .notes-content-container {
+    display: flex;
+    flex-direction: column;
   }
-  /* Adjust the layout to stack NotesHome on top of HomeNotesDefault */
+
+  
   .maindis {
+    width: 100wh;
     flex-direction: column;
     align-items: center;
   }

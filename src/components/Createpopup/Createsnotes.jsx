@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './Createnotes.css'
+import "./Createnotes.css";
 
 function Createsnotes({ groupNamesParent, setGroupNamesParent, onClose }) {
   const [groupName, setGroupName] = useState("");
@@ -26,9 +26,12 @@ function Createsnotes({ groupNamesParent, setGroupNamesParent, onClose }) {
 
   return (
     <div className="popup">
-      <div className="popup__title">Create New Notes Group</div>
+      <div className="popup__title">
+        <p>Create New Notes Group</p>
+      </div>
       <div className="popup__input">
-        <span>Group Name</span>
+        <p>Group Name</p>
+
         <input
           value={groupName}
           onChange={handleGroupName}
@@ -37,7 +40,8 @@ function Createsnotes({ groupNamesParent, setGroupNamesParent, onClose }) {
         />
       </div>
       <div className="popup__color__input">
-        <span>Group Color</span>
+        <p>Group Color</p>
+
         <div className="popup__color__input__color">
           <div
             className={`popup__color__input__color__1 ${

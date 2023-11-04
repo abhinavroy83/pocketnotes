@@ -69,10 +69,7 @@ function NotesHome() {
   return (
     <div className="Notes">
       <div className="NotesTitle">
-        <div
-          className="TitleColor"
-          style={{ backgroundColor: bgColor }}
-        >
+        <div className="TitleColor" style={{ backgroundColor: bgColor }}>
           {initials}
         </div>
         <div className="TitlText">{selectedTitle}</div>
