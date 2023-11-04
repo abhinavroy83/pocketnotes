@@ -36,25 +36,25 @@ function NotesList() {
   };
 
   return (
-    <div className="desktop__sidebar">
-      <div className="desktop__sidebar__title">Pocket Notes</div>
-      <div className="desktop__sidebar__create__notes__btn">
+    <div className="sidebar">
+      <div className="sidebar_title">Pocket Notes</div>
+      <div className="notes_btn">
         <button onClick={handleClick}>
           <span id="add">+</span>
           <span>Create Notes Group</span>
         </button>
       </div>
-      <div className="desktop__sidebar__notes__title">
+      <div className="noteTitle">
         {titles.length > 0 ? (
           titles.map((title, index) => <Notestitle key={index} title={title} />)
         ) : (
-          <div className="desktop__sidebar__notes__title__empty">
+          <div className="">
             <p>No Notes Group Created</p>
           </div>
         )}
       </div>
       {showPopup && (
-        <div className="desktop__popup__overlay">
+        <div className="popup_overlap">
           <Createsnotes
             groupNamesParent={groupNamesParent}
             setGroupNamesParent={setGroupNamesParent}

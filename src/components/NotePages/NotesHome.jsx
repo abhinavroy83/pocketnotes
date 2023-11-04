@@ -67,22 +67,22 @@ function NotesHome() {
   };
 
   return (
-    <div className="desktop__notes">
-      <div className="desktop__notes__title">
+    <div className="Notes">
+      <div className="NotesTitle">
         <div
-          className="desktop__notes__title__color"
+          className="TitleColor"
           style={{ backgroundColor: bgColor }}
         >
           {initials}
         </div>
-        <div className="desktop__notes__title__text">{selectedTitle}</div>
+        <div className="TitlText">{selectedTitle}</div>
       </div>
-      <div className="desktop__notes__content">
+      <div className="NotesContent">
         {notes && notes.length > 0
           ? notes.map((note, index) => <UserNotes key={index} note={note} />)
           : null}
       </div>
-      <div className="desktop__notes__input">
+      <div className="Notes_Input">
         <textarea
           value={text}
           placeholder="Enter your notes here"

@@ -1,4 +1,4 @@
-.desktop__notes {
+.Notes {
   width: 76vw;
   height: 100vh;
   display: flex;
@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-.desktop__notes__title {
+.NotesTitle {
   height: 13vh;
   width: 76vw;
   background-color: #e8e8e8;
@@ -16,7 +16,7 @@
   font-size: 5vh;
 }
 
-.desktop__notes__title__color {
+.TitleColor {
   height: 9vh;
   width: 9vh;
   border-radius: 50%;
@@ -28,11 +28,11 @@
   font-size: 4vh;
 }
 
-.desktop__notes__title__text {
-  margin-left: 4vh;
+.TitlText{
+    margin-left: 4vh;
 }
 
-.desktop__notes__content {
+.NotesContent {
   overflow-y: scroll;
   overflow-x: hidden;
   height: 57vh;
@@ -46,12 +46,9 @@
   display: none; /* Chrome, Safari and Opera */
 }
 
-.desktop__notes__content__title {
-  height: 20vh;
-  width: 76vw;
-}
 
-.desktop__notes__input {
+
+.Notes_Input {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,7 +59,7 @@
   bottom: 0;
 }
 
-.desktop__notes__input > textarea {
+.Notes_Input > textarea {
   border: none;
   outline: none;
   border-radius: 1vh;
@@ -73,7 +70,7 @@
   resize: none;
 }
 
-.desktop__notes__input img {
+.Notes_Input img {
   position: absolute;
   bottom: 4vh;
   right: 6vh;

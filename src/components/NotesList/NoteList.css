@@ -1,23 +1,23 @@
-.desktop__sidebar {
+.sidebar {
   width: 24vw;
   height: 100vh;
 }
 
-.desktop__sidebar__title {
+.sidebar_title {
   font-size: 1.5rem;
   font-weight: 600;
   margin: 1rem;
   text-align: left;
 }
 
-.desktop__sidebar__create__notes__btn {
+.notes_btn {
   height: 11vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.desktop__popup__overlay {
+.popup_overlap {
   position: fixed;
   top: 0;
   left: 0;
@@ -27,7 +27,7 @@
   z-index: 999;
 }
 
-.desktop__sidebar__create__notes__btn > button {
+.notes_btn > button {
   width: 80%;
   height: 6vh;
   border: none;
@@ -45,14 +45,38 @@
   font-size: 30px;
 }
 
-.desktop__sidebar__notes__title {
+.noteTitle {
   overflow-y: scroll;
   overflow-x: hidden;
   max-height: 79vh;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
 }
 
 ::-webkit-scrollbar {
   display: none; /* Chrome, Safari and Opera */
+}
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+  }
+
+  .notes_btn > button {
+    width: 100%;
+  }
+}
+
+/* Media query for screens smaller than 576px */
+@media (max-width: 576px) {
+  .sidebar_title {
+    font-size: 1.2rem;
+  }
+
+  .notes_btn {
+    height: 8vh;
+  }
+
+  .noteTitle {
+    max-height: 70vh;
+  }
 }

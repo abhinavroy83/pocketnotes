@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import './App.css'
 import Main from "./components/Main";
 import { Pocketprovider, usePocketContext } from "./context/pocketContext";
 
@@ -9,7 +10,9 @@ function App() {
   }, [selected]);
   return (
     <Pocketprovider>
-      <Main />
+      <div className="App">
+        <Main />
+      </div>
     </Pocketprovider>
   );
 }

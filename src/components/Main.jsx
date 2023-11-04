@@ -9,7 +9,7 @@ function Main() {
   const { selected } = usePocketContext();
   return (
     <div>
-      <div className="main">
+      <div className="maindis">
         <NotesList />
         {selected.length > 0 ? <NotesHome /> : <HomeNotesDefault />}
       </div>
