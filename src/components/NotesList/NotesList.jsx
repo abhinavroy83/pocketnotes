@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-import React from "react";
+import "./NoteList.css";
 import Createsnotes from "../Createpopup/Createsnotes";
 import Notestitle from "../NotesTitle/Notestitle";
-import './NoteList.css'
 
 function NotesList() {
   const [titles, setTitles] = useState([]);
@@ -35,26 +34,27 @@ function NotesList() {
   const handleClose = () => {
     setShowPopup(false);
   };
+
   return (
-    <div className="sidebar">
-      <div className="sidebar_title">Pocket Notes</div>
-      <div className="createnotesBtn">
+    <div className="desktop__sidebar">
+      <div className="desktop__sidebar__title">Pocket Notes</div>
+      <div className="desktop__sidebar__create__notes__btn">
         <button onClick={handleClick}>
           <span id="add">+</span>
           <span>Create Notes Group</span>
         </button>
       </div>
-      <div className="Notestitle">
+      <div className="desktop__sidebar__notes__title">
         {titles.length > 0 ? (
           titles.map((title, index) => <Notestitle key={index} title={title} />)
         ) : (
-          <div className="">
+          <div className="desktop__sidebar__notes__title__empty">
             <p>No Notes Group Created</p>
           </div>
         )}
       </div>
       {showPopup && (
-        <div className="popup">
+        <div className="desktop__popup__overlay">
           <Createsnotes
             groupNamesParent={groupNamesParent}
             setGroupNamesParent={setGroupNamesParent}

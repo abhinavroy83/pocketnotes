@@ -1,20 +1,16 @@
-import { useState } from "react";
-import "./App.css";
-import NotesList from "./components/NotesList/NotesList";
-import NotesHome from "./components/NotesHome";
-import { pocketprovider } from "./context/pocketContext";
+import { useEffect } from "react";
+import Main from "./components/Main";
+import { Pocketprovider, usePocketContext } from "./context/pocketContext";
 
 function App() {
-  const [selected, setSelected] = useState("");
-  const [notes, setNotes] = useState([]);
-
+  const { selected, setSelected } = usePocketContext();
+  useEffect(() => {
+    setSelected(localStorage.getItem("selected") || "");
+  }, [selected]);
   return (
-    <pocketprovider value={{ selected, notes }}>
-      <div>
-        <NotesList />
-        <NotesHome />
-      </div>
-    </pocketprovider>
+    <Pocketprovider>
+      <Main />
+    </Pocketprovider>
   );
 }
 

@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { usePocketContext } from "../../context/pocketContext";
 import "./Notestitle.css";
 
 function Notestitle({ title }) {
-  const { selected, setSelected } = useState();
+  const { selected, setSelected } = usePocketContext();
   const nameInitals = title[0].name
     .split(" ")
     .map((word) => word.charAt(0))
