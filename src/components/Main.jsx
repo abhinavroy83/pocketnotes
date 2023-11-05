@@ -7,18 +7,6 @@ import { usePocketContext } from "../context/pocketContext";
 
 function Main() {
   const { selected } = usePocketContext();
-  const [isResponsive, setIsResponsive] = useState(false);
-  useEffect(() => {
-    const handleResize = () => {
-      setIsResponsive(window.innerWidth <= 768);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
   return (
     <div className="maindis">
       <NotesList />

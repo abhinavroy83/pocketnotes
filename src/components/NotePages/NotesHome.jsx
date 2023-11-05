@@ -3,6 +3,8 @@ import "./NotesHome.css";
 import { usePocketContext } from "../../context/pocketContext";
 import enter from "../../assets/enter.png";
 import UserNotes from "./UserNotes";
+import backbutn from "../../assets/back.png";
+import { useNavigate } from "react-router-dom";
 
 function NotesHome() {
   const [text, setText] = useState("");
@@ -10,6 +12,7 @@ function NotesHome() {
   const [initials, setInitials] = useState("");
   const [selectedTitle, setSelectedTitle] = useState("");
   const { notes, setNotes, selected } = usePocketContext();
+  const navigate = useNavigate();
 
   useEffect(() => {
     setNotes(JSON.parse(localStorage.getItem(selected)) || []);
@@ -65,10 +68,16 @@ function NotesHome() {
   const handleChange = (e) => {
     setText(e.target.value);
   };
+  const back = () => {
+    if (window.innerWidth <= 768) {
+      navigate("/");
+    }
+  };
 
   return (
     <div className="Notes">
       <div className="NotesTitle">
+        <img src={backbutn} alt="not" className="backbtn" onClick={back} />
         <div className="TitleColor" style={{ backgroundColor: bgColor }}>
           {initials}
         </div>

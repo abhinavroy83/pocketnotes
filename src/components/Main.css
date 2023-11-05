@@ -9,8 +9,8 @@
 @media (max-width: 768px) {
   
   .notes-content-container {
-    display: flex;
-    flex-direction: column;
+    display: none;
+    /* flex-direction: column; */
   }
 
   

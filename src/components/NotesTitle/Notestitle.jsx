@@ -1,7 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import { usePocketContext } from "../../context/pocketContext";
 import "./Notestitle.css";
 
 function Notestitle({ title }) {
+  const navigate = useNavigate();
   const { selected, setSelected } = usePocketContext();
   const nameInitals = title[0].name
     .split(" ")
@@ -16,6 +18,12 @@ function Notestitle({ title }) {
 
   const handleTitleClick = () => {
     setSelected(title[0].name);
+
+    if (window.innerWidth <= 768) {
+      setSelected(title[0].name);
+      navigate("/notes");
+    }
+    // navigate("/notes");
   };
 
   return (

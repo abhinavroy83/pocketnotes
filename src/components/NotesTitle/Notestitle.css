@@ -30,3 +30,30 @@
   background-color: #f7ecdc;
   color: black;
 }
+
+@media (max-width: 768px) {
+  .group__title__logo {
+    height: 10vh;
+    width: 70vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2vh 0 2vh 3vh;
+  }
+  .title__logo {
+    height: 9vh;
+    width: 9vh;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    font-weight: 600;
+  }
+  .group__title {
+    width: 50vw;
+    text-align: left;
+    font-size: 3vh;
+    font-weight: 600;
+  }
+}
