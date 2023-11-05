@@ -39,42 +39,42 @@ function Createsnotes({ groupNamesParent, setGroupNamesParent, onClose }) {
           placeholder="Enter Group Name..."
         />
       </div>
-      <div className="popup__color__input">
+      <div className="color_input">
         <p>Group Color</p>
 
-        <div className="popup__color__input__color">
+        <div className="color">
           <div
-            className={`popup__color__input__color__1 ${
+            className={`color__1 ${
               bgColor === "rgb(179, 139, 250)" ? `highlight` : null
             }`}
             onClick={handleColor}
           ></div>
           <div
-            className={`popup__color__input__color__2 ${
+            className={`color_2 ${
               bgColor === "rgb(255, 121, 242)" ? `highlight` : null
             }`}
             onClick={handleColor}
           ></div>
           <div
-            className={`popup__color__input__color__3 ${
+            className={`color__3 ${
               bgColor === "rgb(67, 230, 252)" ? `highlight` : null
             }`}
             onClick={handleColor}
           ></div>
           <div
-            className={`popup__color__input__color__4 ${
+            className={`color__4 ${
               bgColor === "rgb(241, 149, 118)" ? `highlight` : null
             }`}
             onClick={handleColor}
           ></div>
           <div
-            className={`popup__color__input__color__5 ${
+            className={`color__5 ${
               bgColor === "rgb(0, 71, 255)" ? `highlight` : null
             }`}
             onClick={handleColor}
           ></div>
           <div
-            className={`popup__color__input__color__6 ${
+            className={`color__6 ${
               bgColor === "rgb(102, 145, 255)" ? `highlight` : null
             }`}
             onClick={handleColor}
